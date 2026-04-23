@@ -1,68 +1,171 @@
-# Flutter Movie App
+# 🎬 Flutter Movie Ticket Booking App
 
-<br>
+Aplikasi mobile berbasis **Flutter** untuk menampilkan daftar film, mencari film, melihat detail film, dan melakukan simulasi pemesanan kursi bioskop menggunakan **Public API**.
 
-<a href="https://www.buymeacoffee.com/smkamal" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+---
 
-<br>
+## 📌 Deskripsi Project
 
-[Download Apk](https://drive.google.com/file/d/1Bre6gz8XWgDJuRnwyzPwVn7ZMZr8TBOr/view?usp=sharing)
+Project ini dibuat untuk memenuhi tugas **Ujian Tengah Semester (UTS)** mata kuliah **Lab Pengembangan Aplikasi Mobile**.
 
-<br>
+Aplikasi menggunakan data real-time dari **The Movie Database (TMDB) API** dan menerapkan konsep:
 
-[Demo App Video](https://drive.google.com/file/d/1M9Am84OuhczF9rblkHWa-OXYC61GA-UK/view)
+* Konsumsi REST API
+* State Management
+* Asynchronous Programming
+* Reusable Widget
+* Responsive UI
+* Error Handling
 
-<br>
+---
 
-[Code Structure Video](https://youtu.be/IfLQQcxKg1U)
+## ✨ Fitur Utama
 
-## Project Features
+### 🎥 Dashboard Film
 
-The features I'm implemented. Those are -
+* Menampilkan daftar film terbaru / upcoming movie
+* Tampilan modern dan responsif
+* Data diambil langsung dari API
 
-- [Load Upcoming movie list]
-- [Load top rated movie list]
-- [Searching movie by keywords]
-- [Get movie details]
-- [Load images by movie id]
-- [Animated UI]
-- [Cache Data]
+### 🔍 Pencarian Film
 
-<br>
+* Mencari judul film secara real-time
+* Menggunakan `async/await`
+* UI tetap responsif saat proses pencarian
 
-## Dependencies
+### 🎟 Detail Film & Booking
 
-- Provider (For state management)
-- Cached network image
-- Shimmer
-- Equatable
-- Flutter SVG
-- Google Fonts
-- Carousel Slider
-- Api Cache Manager
-- Animate do
-- HTTP
+* Menampilkan informasi film
+* Simulasi pemilihan kursi bioskop
+* Simulasi pembelian tiket
 
-<br>
+### 📚 Media Library
 
-## Screenshots
+* Halaman koleksi film
+* Tampilan menarik dan modern
 
-<img src="screenshots/movie_one.jpg" width="200" height="400" />
+### ⚙️ Menu More
 
-<img src="screenshots/movie_two.jpg" width="200" height="400" />
+* Informasi aplikasi
+* Profil developer
+* Versi aplikasi
 
-<img src="screenshots/movie_three.jpg" width="200" height="400" />
+---
 
-<img src="screenshots/movie_four.jpg" width="200" height="400" />
+## 🛠 Teknologi yang Digunakan
 
-<img src="screenshots/movie_five.jpg" width="200" height="400" />
+| Teknologi    | Fungsi                    |
+| ------------ | ------------------------- |
+| Flutter      | Framework aplikasi mobile |
+| Dart         | Bahasa pemrograman        |
+| Provider     | State Management          |
+| HTTP         | Request API               |
+| TMDB API     | Sumber data film          |
+| Google Fonts | Typography                |
+| Shimmer      | Loading animation         |
 
-<img src="screenshots/movie_six.jpg" width="200" height="400" />
+---
 
-<img src="screenshots/movie_seven.jpg" width="200" height="400" />
+## 📂 Struktur Folder Project
 
-<img src="screenshots/movie_eight.jpg" width="200" height="400" />
+```text id="l8h94s"
+lib/
+│── apiz/                 # Service API
+│── controllers/          # Logic & State Management
+│── data/                 # Model data JSON
+│── modules/              # Halaman aplikasi
+│── widgets/              # Reusable widget
+│── utils/                # Theme, warna, constant
+│── main.dart             # Entry point aplikasi
+```
 
-<img src="screenshots/movie_nine.jpg" width="200" height="400" />
+---
 
-<img src="screenshots/movie_ten.jpg" width="200" height="400" />
+## 🧠 Alasan Menggunakan Provider
+
+Project ini menggunakan **Provider** karena:
+
+* Ringan dan mudah dipahami
+* Cocok untuk project skala menengah
+* Memisahkan UI dan logic dengan baik
+* Mudah maintenance
+* Reaktif menggunakan `notifyListeners()`
+
+---
+
+## 🔄 Implementasi Asynchronous
+
+Aplikasi menggunakan:
+
+```dart id="jfw8cz"
+async / await
+Future
+HTTP Request
+```
+
+Tujuannya agar tampilan tetap lancar dan tidak freeze saat mengambil data dari internet.
+
+---
+
+## ♻️ Reusable Widget
+
+Untuk efisiensi code dan konsistensi UI, project ini menggunakan widget yang dapat dipakai ulang:
+
+* `ErrorView`
+* `Loading`
+* `CustomSearchField`
+* `WatchImageViewItem`
+* `SearchItemView`
+* `ShimmerDashboardLoading`
+
+---
+
+## ⚠️ Error Handling
+
+Aplikasi menangani kondisi:
+
+* Tidak ada koneksi internet
+* Gagal mengambil data API
+* Error sistem
+
+User akan melihat pesan yang ramah dan tombol retry.
+
+---
+
+## 🌐 Sumber API
+
+Menggunakan:
+
+**The Movie Database API (TMDB)**
+https://www.themoviedb.org/
+
+---
+
+## 🚀 Cara Menjalankan Project
+
+flutter pub get
+flutter run
+
+Untuk Web:
+
+flutter run -d chrome
+
+---
+
+## 👩‍💻 Developer
+
+**Nabila Arifa Umayi**
+Mahasiswa Sistem Informasi
+Project UTS Mobile Development
+
+---
+
+## 📌 Versi
+
+`v1.0.0`
+
+---
+
+## 📄 Catatan
+
+Project ini dibuat untuk kebutuhan akademik dan pembelajaran.
